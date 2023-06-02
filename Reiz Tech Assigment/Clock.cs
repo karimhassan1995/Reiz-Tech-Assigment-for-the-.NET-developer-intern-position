@@ -8,33 +8,26 @@ namespace Reiz_Tech_Assigment
 {
     public class Clock
     {
+        private readonly static int DEGREES_PER_CIRCLE = 360;
+        private readonly static int NUMBER_OF_HOURS = 12;
+        private readonly static int MINUTES_PER_HOUR = 60;
+        private readonly static int DEGREES_PER_HOUR = DEGREES_PER_CIRCLE / NUMBER_OF_HOURS;
 
         public int hour, minute;
-      
+
         public Clock(int hour, int minute)
         {
             this.hour = hour;
             this.minute = minute;
         }
 
-        public void CalculateAngle()
+        public double CalculateAngle()
         {
-            double hourDegree = (this.hour * 30) + (this.minute * 30 / 60);
-            double minimumDegree = this.minute * 6;
+            double hourDegree = (this.hour * DEGREES_PER_HOUR) + ((this.minute * 1.0 / MINUTES_PER_HOUR) * DEGREES_PER_HOUR);
+            double minuteDegree = (this.minute * 1.0 / MINUTES_PER_HOUR) * DEGREES_PER_CIRCLE;
 
-            double difference = Math.Abs(hourDegree - minimumDegree);
-            if (difference > 180)
-            {
-                difference = 360 - difference;
-            }
-            Console.WriteLine($"Angle between hour hand and minute hand is" + " " + difference);
-            Console.ReadLine();
+            double difference = Math.Abs(hourDegree - minuteDegree);
+            return Math.Min(difference, 360 - difference);
         }
-
-            
-
-
-
-        
     }
 }

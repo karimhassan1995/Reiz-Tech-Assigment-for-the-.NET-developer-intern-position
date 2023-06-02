@@ -11,56 +11,82 @@ namespace Reiz_Tech_Assigment
     {
         public static void Main(string[] args)
         {
-
             // First question in REIZ TECH HOMEWORK ASSIGNMENT 
-            Console.WriteLine("Enter Hour: ");
-            int hour = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Minute: ");
-            int minute = Convert.ToInt32(Console.ReadLine());
+            bool IsHourTrue = true;
+            int hour = 0;
 
-            Clock clock = new Clock(hour , minute);
-
-            clock.CalculateAngle();
-
-            // Second question in REIZ TECH HOMEWORK ASSIGNMENT 
-            List<Branch> Nodes = new List<Branch>();
-
-            Branch firstNode = new Branch();
-            Nodes.Add(firstNode);
-            Branch secondNode = new Branch(Nodes);
-            Nodes.Clear();
-            Branch thirdNode = new Branch();
-            Nodes.Add(secondNode);
-            Nodes.Add(thirdNode);
-            Branch forthNode = new Branch(Nodes);
-            Nodes.Clear();
-            Branch fifthNode = new Branch();
-            Nodes.Add(fifthNode);
-            Branch sixthNode = new Branch(Nodes);
-            Nodes.Clear();
-            Branch seventhNode = new Branch();
-            Nodes.Add(forthNode);
-            Nodes.Add(sixthNode);
-            Nodes.Add(seventhNode);
-            Branch eighthNode = new Branch(Nodes);
-            Nodes.Clear();
-            Branch ninethNode = new Branch();
-            Nodes.Add(ninethNode);
-            Branch tenthNode = new Branch(Nodes);
-            Nodes.Clear();  
-            Nodes.Add(tenthNode);
-            Nodes.Add(eighthNode);
-            Branch root = new Branch(Nodes);
-            Nodes.Clear();
-
-
-
-
+            while (IsHourTrue == true)
+            {
+                Console.WriteLine("Enter Hour: ");
             
-            
-            int x = root.calculateDepth(root);
+                try
+                {
+                    hour = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("plz Enter hour as int numbers");
+                    continue;
+                }
+                if (hour > 12 || hour < 0)
+                {
+                    Console.WriteLine("plz Enter hour between 0 and 12");
+                    continue;
+                }
+                IsHourTrue = false;
+            }
 
-            Console.WriteLine(x);
+            bool IsMinuteTrue = true;
+            int minute = 0;
+            while (IsMinuteTrue == true)
+            {
+                Console.WriteLine("Enter Minute: ");
+               
+                try
+                {
+                    minute = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception ex) 
+                { 
+                    Console.WriteLine("plz Enter minute as int numbers");
+                        continue;
+                }
+                if (minute > 60 || minute < 0)
+                {
+                    Console.WriteLine("plz minute number between 0 and 60");
+                    continue;
+                }
+                IsMinuteTrue = false;
+            }
+
+
+            Clock clock = new Clock(hour, minute);
+                Console.WriteLine($"Angle between hour hand and minute hand is" + " " + clock.CalculateAngle());
+/*
+            double diff = 0;
+            int wrong = 0;
+            for(int i = 1; i <= 12; i++)
+            {
+                diff = (i % 12) * 30;
+                for (int j = 0; j <= 60; j++)
+                {
+                    Clock c = new Clock(i, j);
+                    if (c.CalculateAngle() != diff)
+                    {
+                        wrong++;
+                        Console.WriteLine(i);
+                        Console.WriteLine(j);
+                        Console.WriteLine(c.CalculateAngle());
+                        Console.WriteLine(diff);
+                        Console.WriteLine("==========");
+                    }
+                    diff += 5.5;
+                    if (diff > 180) diff = 360 - diff;
+                }
+            }
+            Console.WriteLine(wrong);*/
+
+
 
 
         }

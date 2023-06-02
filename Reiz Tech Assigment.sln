@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reiz Tech Assigment", "Reiz Tech Assigment\Reiz Tech Assigment.csproj", "{5EB3E2E5-8001-4547-917D-CAC6AC6468C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clock", "Reiz Tech Assigment\Clock.csproj", "{5EB3E2E5-8001-4547-917D-CAC6AC6468C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Non-Binary-Tree", "Non-Binary-Tree\Non-Binary-Tree.csproj", "{F3CB3889-8485-4897-B6AE-A9EA420658DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5EB3E2E5-8001-4547-917D-CAC6AC6468C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EB3E2E5-8001-4547-917D-CAC6AC6468C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EB3E2E5-8001-4547-917D-CAC6AC6468C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CB3889-8485-4897-B6AE-A9EA420658DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CB3889-8485-4897-B6AE-A9EA420658DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CB3889-8485-4897-B6AE-A9EA420658DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CB3889-8485-4897-B6AE-A9EA420658DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
