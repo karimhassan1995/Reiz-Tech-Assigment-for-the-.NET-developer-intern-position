@@ -62,29 +62,7 @@ namespace Reiz_Tech_Assigment
 
             Clock clock = new Clock(hour, minute);
                 Console.WriteLine($"Angle between hour hand and minute hand is" + " " + clock.CalculateAngle());
-/*
-            double diff = 0;
-            int wrong = 0;
-            for(int i = 1; i <= 12; i++)
-            {
-                diff = (i % 12) * 30;
-                for (int j = 0; j <= 60; j++)
-                {
-                    Clock c = new Clock(i, j);
-                    if (c.CalculateAngle() != diff)
-                    {
-                        wrong++;
-                        Console.WriteLine(i);
-                        Console.WriteLine(j);
-                        Console.WriteLine(c.CalculateAngle());
-                        Console.WriteLine(diff);
-                        Console.WriteLine("==========");
-                    }
-                    diff += 5.5;
-                    if (diff > 180) diff = 360 - diff;
-                }
-            }
-            Console.WriteLine(wrong);*/
+
 
 
 
