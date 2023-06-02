@@ -57,7 +57,10 @@ namespace Reiz_Tech_Assigment
 
 
             
-           
+            
+            int x = root.calculateDepth(root);
+
+            Console.WriteLine(x);
 
 
         }
